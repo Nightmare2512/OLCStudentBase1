@@ -1,0 +1,23 @@
+student_count = 0
+student_list = []
+student_marks = []
+current_student = ()
+current_marks = 0
+while True:
+    current_student == input("input a students's name: ")
+    # if current_student == "q" :
+    #     break
+    
+    while True:
+        current_marks == int(input("input this student's marks :"))
+        if current_marks >= 0 and current_marks <=100:
+            break
+        else:
+            print("Enter a number from 0 - 100")
+    student_list.append(current_student)
+    student_marks.append(current_marks)
+
+student_count = len(student_list)
+print(student_count)
+
+    

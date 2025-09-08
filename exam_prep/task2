@@ -1,0 +1,20 @@
+
+word = input("Please enter your word: ")
+word = word.lower() # 7 removed is
+begin_p = word.startswith("p")#8 changed begin to start
+end_h = word.endswith("h")
+contain_e = word.find("e")
+word_length = len(word) #9 changed word.length() to len(word)
+if not begin_p and not end_h and contain_e == -1 :  #6 added =
+    if word_length <= 3: #1 added =
+        print("The length of the word is short.")
+    elif word <= 10: 
+        print("The length of the word is medium.")
+    else: #5 changed elif to else
+        print("The length of the word is long.")
+if begin_p:
+    print("Invalid. You entered a word that begins with 'p'.")
+elif end_h:
+    print("Invalid. You entered a word that ends with 'h'.")
+elif contain_e !=1 : #4 remove not #2 added !=1
+    print("Invalid. You entered a word that contains 'e'.") #3 changed a to e

@@ -1,0 +1,677 @@
+#------------------------------------------------------------
+# For Loops through List
+#------------------------------------------------------------
+
+# Exercise 1: Printing Items (Method 1)
+# Given fruits = ["apple", "banana", "cherry"]
+# Use a for loop to print each fruit directly.
+# Output example:
+# I like to eat apple.
+# I like to eat banana.
+# I like to eat cherry.
+# fruits = ["apple", "banana", "cherry"]
+
+# for i in fruits:
+#     print("I like to eat", i)
+
+
+
+#------------------------------------------------------------
+# Exercise 2: Printing Items (Method 2)
+# Given the same fruits list
+# Use for i in range(len(fruits)) to print the items.
+# Output example:
+# Fruit 1: apple
+# Fruit 2: banana
+# Fruit 3: cherry
+# fruits = ["apple", "banana", "cherry"]
+
+# for i in range(len(fruits)):
+#     print("Fruit", i+1, ":", fruits[i])
+
+
+
+#------------------------------------------------------------
+# Exercise 3: Numbers Greater than 50
+# Given numbers = [12, 67, 45, 89, 23]
+# Use a for loop to print only numbers greater than 50.
+# Expected Output:
+# 67
+# 89
+
+# numbers = [12, 67, 45, 89, 23]
+# for i in numbers:
+#     if i > 50:
+#         print(i)
+
+
+
+#------------------------------------------------------------
+# For Loops through Dictionary
+#------------------------------------------------------------
+
+# Exercise 4: Printing Keys
+# Given scores = {"Ali": 55, "Bala": 80, "Cindy": 62}
+# Write a loop to print all the student names.
+# Expected Output:
+# Ali
+# Bala
+# Cindy
+# scores = {"Ali": 55, "Bala": 80, "Cindy": 62}
+
+# for i in scores:
+#     print(i)
+
+
+
+
+#------------------------------------------------------------
+# Exercise 5: Printing Values
+# Using the same dictionary, print only the marks.
+# Expected Output:
+# 55
+# 80
+# 62
+
+# for i in scores:
+#     print(scores[i])
+
+
+
+#------------------------------------------------------------
+# Exercise 6: Keys and Values Together
+# Print each student’s name and score in the format:
+# Ali scored 55
+# Bala scored 80
+# Cindy scored 62
+
+# for i in scores:
+#     print(i, "scored", scores[i])
+
+
+#------------------------------------------------------------
+# For Loops with Nested Lists
+#------------------------------------------------------------
+
+# Exercise 7: Mapping Students to Scores
+# students = ["Ali", "Bala", "Cindy"]
+# marks = [55, 80, 62]
+# Use a for loop to combine them into a dictionary.
+# Expected Output:
+# {"Ali": 55, "Bala": 80, "Cindy": 62}
+
+# students = ["Ali", "Bala", "Cindy"] 
+# marks = [55, 80, 62]
+# students_dict = {}
+# for i in range(len(students)):
+#     students_dict[students[i]] = marks[i]
+# print(students_dict)
+
+#------------------------------------------------------------
+# Exercise 8: Pairing Names
+# boys = ["Tom", "Dick"]
+# girls = ["Amy", "Beth"]
+# Make a dictionary matching each boy to each girl.
+# Expected Output:
+# {"Tom": "Amy", "Dick": "Beth"}
+# pairings = {}
+# boys = ["Tom", "Dick"]
+# girls = ["Amy", "Beth"]
+# for i in range(len(boys)):
+#     pairings[boys[i]] = girls[i]
+# print(pairings)
+
+
+
+
+#------------------------------------------------------------
+# Exercise 9: Totaling Scores
+# subjects = ["Math", "Science", "English"]
+# marks = [75, 82, 68]
+# Store into a dictionary, then loop to calculate total.
+# Expected Output:
+# Total Score = 225
+# scores_dict = {}
+# total_score = 0
+# subjects = ["Math", "Science", "English"]
+# marks = [75, 82, 68]
+# for i in range(len(subjects)):
+#     scores_dict[subjects[i]] = marks[i]
+# print(scores_dict)
+# for i in scores_dict:
+#     total_score += scores_dict[i]
+# print("Total Score =", total_score)
+
+
+#------------------------------------------------------------
+# While Loop Validation
+#------------------------------------------------------------
+
+# Exercise 10: Length Check
+# Keep asking user for a username until it has at least 5 characters.
+
+# while True:
+#     username = input("Enter a username: ")
+#     if len(username) >= 5:
+#         print("Username accepted:", username)
+#         break
+#     else:
+#         print("Username too short, try again.")
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 11: Numbers Only
+# Keep asking user to enter age until input contains digits only.
+
+# while True:
+#     age = input('Enter your age: ')
+#     if age.isdigit():
+#         print("Age accepted:", age)
+#         break
+#     else:
+#         print("Invalid input, please enter digits only.")
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 12: Uppercase Only
+# Keep asking until user enters a code in uppercase letters only.
+
+# while True:
+#     code = input("Enter an uppercase code: ")
+#     if code.isupper():
+#         print("Code accepted:", code)
+#         break
+#     else:
+#         print("Code must be uppercase only, try again.")
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 13: Lowercase Only
+# Keep asking until user enters an email in lowercase only.
+
+# while True:
+#     email = input("Enter your email: ")
+#     if email.islower():
+#         print("Email accepted:", email)
+#         break
+#     else:
+#         print("Email must be in lowercase only, try again.")
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 14: Password Validation
+# Keep asking until user enters a password with length >= 8.
+
+# while True:
+#     password = input("Enter a password: ")
+#     if len(password) >= 8:
+#         print("Password accepted.")
+#         break
+#     else:
+#         print("Password too short, must be at least 8 characters.")
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 15: Date Validation
+# Keep asking until user enters a date in format MM-YYYY.
+# Ensure the date is between 01-1900 and 09-2025.
+
+# while True:
+#     date = input("Enter a date (MM-YYYY): ")
+#     if len(date) == 7 and date[2] == '-':
+#         month = int(date[:2])
+#         year = int(date[3:])
+#         if 1 <= month <= 12 and 1900 <= year <= 2025:
+#             print("Date accepted:", date)
+#             break
+#         else:
+#             print("Invalid date format or out of range, try again.")
+
+
+
+#------------------------------------------------------------
+# Adding to and Deleting from List
+#------------------------------------------------------------
+
+# Exercise 16: Adding Numbers
+# Start with empty list even_numbers = []
+# From numbers = [3, 8, 12, 7, 10]
+# Add only even numbers into even_numbers.
+# Expected Output:
+# [8, 12, 10]
+# import math
+# numbers = [3, 8, 12, 7, 10]
+# even_numbers = []
+# for i in numbers:
+#     if i % 2 == 0:
+#         even_numbers.append(i)
+# print(even_numbers)
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 17: Copy Names with 'A'
+# From names = ["Ali", "Ben", "Amy", "John"]
+# Copy only names starting with 'A' into a new list.
+# Expected Output:
+#  ["Ali", "Amy"]
+# A_list = []
+# names = ["Ali", "Ben", "Amy", "John"]
+# for i in names:
+#     if i[0] == 'A':
+#         A_list.append(i)
+# print(A_list)
+
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 18: Copy Scores > 50
+# From scores = [23, 56, 78, 49, 88]
+# Copy all scores above 50 into pass_list.
+# Expected Output:
+# [56, 78, 88]
+# pass_list = []
+# scores = [23, 56, 78, 49, 88]
+# for i in scores:
+#     if i > 50:
+#         pass_list.append(i)
+# print(pass_list)
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 19: Remove Odd Numbers
+# From numbers = [12, 7, 15, 20, 33]
+# Delete all odd numbers.
+# Expected Output:
+# [12, 20]
+# import math
+# numbers = [12, 7, 15, 20, 33]
+# odd_numbers = []
+# for i in numbers:
+#     if i % 2 == 1:
+#         odd_numbers.append(i)
+# print(odd_numbers)
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 20: Remove Names with 'x'
+# From names = ["Alex", "Max", "Sam"]
+# Delete names that contain 'x'.
+# Expected Output:
+# ["Sam"]
+
+# names = ["Alex", "Max", "Sam"]
+# new_names = []
+# for i in names:
+#     if 'x' not in i:
+#         new_names.append(i)       
+# print(new_names)
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 21: Remove Fail Scores
+# From marks = [12, 35, 50, 67, 88]
+# Remove all scores below 50.
+# Expected Output:
+# [50, 67, 88]
+
+# marks = [12, 35, 50, 67, 88]
+# pass_marks = []
+# for i in marks:
+#     if i >= 50:
+#         pass_marks.append(i)
+# print(pass_marks)
+
+
+
+
+#------------------------------------------------------------
+# String and List Functions
+#------------------------------------------------------------
+
+# Exercise 22: find()
+# sentence = "Computing is fun"
+# Find the index of "is".
+# Expected Output:
+# 10
+# sentence = "Computing is fun"
+# index = 0
+# index = sentence.find("is")
+# print(index)
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 23: find() not found
+# sentence = "I love Python"
+# Use find() to check if "Java" exists.
+# Expected Output:
+# -1
+# index = 0
+# sentence = "I love Python"
+# index = sentence.find("Java")
+# print(index)
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 24: index()
+# numbers = [10, 20, 30, 40]
+# Find the position of number 30.
+# Expected Output:
+# 2
+# position = 0
+# numbers = [10, 20, 30, 40]
+# position = numbers.index(30)
+# print(position)
+
+# ----------------------------------------------------------------
+
+# Exercise 25: index() Error
+# numbers = [1, 2, 3]
+# What happens if you use index() on 9?
+# Expected: ValueError (9 is not in list)
+# position = 0
+# numbers = [1, 2, 3]
+# position = numbers.index(9)
+# print(position)
+
+
+#------------------------------------------------------------
+# String Slicing
+#------------------------------------------------------------
+
+# Exercise 26: First 3 Letters
+# word = "Computing"
+# Extract first 3 characters.
+# Expected Output:
+# Com
+# word = "Computing"
+# spliced_word = word[:3]
+# print(spliced_word)
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 27: Username
+# name = "John Malkovich"
+# Extract first 5 characters as username (lowercase).
+# If first name is shorter than 5 chars, use letters from last name.
+# Remove spaces before slicing.
+# Example: "John Malkovich" → "johnm"
+# Example: "Samson Gorbachov" → "samso"
+
+# name = input("Enter your full name: ")
+# name = name.replace(" ", "").lower()
+# username = name[:5]
+# print(f"{name} → {username}")
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 28: Reverse String
+# word = "Python"
+# Print string in reverse.
+# Expected Output:
+# nohtyP
+
+# word = "Python"
+# reversed_word = word[::-1]
+# print(reversed_word)
+
+
+
+# ----------------------------------------------------------------
+
+
+
+
+#------------------------------------------------------------
+# List Slicing
+#------------------------------------------------------------
+
+# Exercise 29: First 3 Items
+# numbers = [2, 4, 6, 8, 10]
+# Extract first 3 items.
+# Expected Output:
+# [2, 4, 6]
+
+# numbers = [2, 4, 6, 8, 10]
+# numbers_spliced = numbers[:3]
+# print(numbers_spliced)
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 30: Last 2 Items
+# From the same list, extract last 2 items.
+# Expected Output:
+# [8, 10]
+
+# numbers = [2, 4, 6, 8, 10]
+# spliced_numbers = numbers[-2:]
+# print(spliced_numbers)
+
+
+# ----------------------------------------------------------------
+
+# Exercise 31: Middle Items
+# Extract the middle 3 items.
+# [2, 4, 6, 8, 10] → [4, 6, 8]
+# [2, 4, 6, 8, 10, 12, 14] → [6, 8, 10]
+
+# numbers1 = [2, 4, 6, 8, 10]
+# numbers2 = [2, 4, 6, 8, 10, 12, 14]
+# len1 = len(numbers1)
+# len1_mid = len1 // 2
+# print(len1_mid)
+# len2 = len(numbers2)
+# len2_mid = len2 // 2
+# print(len2_mid)
+# spliced_numbers1 = numbers1[len1_mid-1:len1_mid+2]
+# spliced_numbers2 = numbers2[len2_mid-1:len2_mid+2]
+# print(spliced_numbers1)
+# print(spliced_numbers2)
+
+
+
+# ----------------------------------------------------------------
+
+
+
+
+#------------------------------------------------------------
+# ASCII, chr(), ord()
+#------------------------------------------------------------
+
+# Exercise 32: ord() Value
+# Find ASCII value of 'A' and 'z'.
+# Expected Output:
+# 65
+# 122
+# A = 0
+# z = 0
+# A = ord('A')
+# z = ord('z')
+# print(A)
+# print(z)
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 33: Generate Password
+# Use chr() to generate a password of random ASCII characters.
+# Password rules:
+# - At least 2 uppercase (65–90)
+# - At least 2 lowercase (97–122)
+# - At least 2 digits (48–57)
+# - At least 2 special characters (33–47)
+# import random
+# password = ""
+# for i  in range (2):
+#     upper = chr(random.randint(65, 90))
+#     lower = chr(random.randint(97, 122))
+#     digit = chr(random.randint(48, 57))
+#     special = chr(random.choice(list(range(33, 47))))
+#     password = password + upper + lower + digit + special
+# print(password)
+    
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 34: Checksum
+# sentence = "ABCDEFG"
+# Add up ASCII values of all characters.
+# checksum = total % 256
+# Example 1: "ABCDEFG" → 65+66+67+68+69+70+71 = 476 → 476 % 256 = 220
+# Example 2: "Today is Sunday!" → 1458 % 256 = 178
+numbers = []
+sum = 0
+sentence = "ABCDEFG"
+for i in sentence:
+    numbers.append(ord(i))
+for i in numbers:
+    sum = sum + i
+checksum = sum % 256
+print(checksum)
+
+
+#------------------------------------------------------------
+# Functions
+#------------------------------------------------------------
+
+# Exercise 35: Define and Call
+# Write a function greet(name) that prints:
+# "Hello, {name}, welcome to Computing!"
+# Example call: greet("Ali")
+# Expected Output:
+# Hello, Ali, welcome to Computing!
+
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 36: Function with Parameter
+# Define a function square(n) that returns n squared.
+# Example call: square(5)
+# Expected Output:
+# 25
+
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 37: Function with 2 Parameters
+# Define a function add(x, y) that returns the sum.
+# Example call: add(12, 8)
+# Expected Output:
+# 20
+
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 38: Using Function
+# Write a function average(lst) that returns the mean of a list of numbers.
+# Example call: average([10, 20, 30, 40, 50])
+# Expected Output:
+# 30.0
+
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 39: Reuse Function with List
+
+# Write a program that accepts a list of numbers and calculates total sum.
+# Example call: [5, 10, 15, 20]
+# Expected Output:
+# 50
+
+
+
+
+
+# ----------------------------------------------------------------
+# Exercise 40: Packing with Floor Division and Modulus
+# Write a function pack_items(total_items, box_size) that:
+# - Calculates how many full boxes can be filled (//).
+# - Calculates leftover items (%).
+# Example call: pack_items(257, 7)
+# Expected Output:
+# 36 full boxes, 5 items leftover
+
+
+
+#------------------------------------------------------------
+# File I/O
+#------------------------------------------------------------
+
+# Exercise 41: Writing to File
+# Write "Hello Computing Students" into a file named test.txt.
+# Expected Content (test.txt):
+# Hello Computing Students
+
+
+
+
+
+# ----------------------------------------------------------------
+
+# Exercise 42: Reading from File
+# Read contents of test.txt and display.
+# Expected Output:
+# Hello Computing Students
+
+
+
+
+
+# ----------------------------------------------------------------
+# Exercise 43: Writing Multiple Lines
+# Write the names "Ali", "Bala", "Cindy" each on a new line into names.txt.
+# Expected Content (names.txt):
+# Ali
+# Bala
+# Cindy

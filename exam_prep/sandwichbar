@@ -1,0 +1,56 @@
+# toppings = ['ham', 'cheese', 'lettuce', 'tomatoes', 'capsicum']
+# top_cost = [1, 0.8, 0.5, 0.5, 0.8]
+# print("Welcome to All-Health Salad Bar!")
+# print("Please select your toppings below.")
+# ham = int(input("Quantity of ham: "))
+# cheese = int(input("Quantity of cheese: "))
+# lettuce = int(input("Quantity of lettuce: "))
+# tomatoes = int(input("Quantity of tomatoes: "))
+# capsicum = int(input("Quantity of capsicum: "))
+# total_cost = ham*top_cost[0] + cheese*top_cost[1] + lettuce*top_cost[2] + tomatoes*top_cost[3] + capsicum*top_cost[4]
+# total_cost = round(total_cost, 2)
+# print("Total cost: $", total_cost)
+
+
+
+# total_cost = 0
+# while True:
+#     toppings = ['ham', 'cheese', 'lettuce', 'tomatoes', 'capsicum']
+#     top_cost = [1, 0.8, 0.5, 0.5, 0.8]
+#     print("Welcome to All-Health Salad Bar!")
+#     print("Please select your toppings below.")
+#     ham = int(input("Quantity of ham: "))
+#     cheese = int(input("Quantity of cheese: "))
+#     lettuce = int(input("Quantity of lettuce: "))
+#     tomatoes = int(input("Quantity of tomatoes: "))
+#     capsicum = int(input("Quantity of capsicum: "))
+#     total_cost = ham*top_cost[0] + cheese*top_cost[1] + lettuce*top_cost[2] + tomatoes*top_cost[3] + capsicum*top_cost[4]
+#     total_cost = round(total_cost, 2)
+#     if total_cost < 5:
+#         print("Total cost should be above $5 current cost is: $", total_cost)
+#     else:
+#         print("Total cost: $", total_cost)
+#         break
+
+
+total_cost = 0
+while True:
+    toppings = ['ham', 'cheese', 'lettuce', 'tomatoes', 'capsicum']
+    top_cost = [1, 0.8, 0.5, 0.5, 0.8]
+    print("Welcome to All-Health Salad Bar!")
+    print("Please select your toppings below.")
+    ham = int(input("Quantity of ham: "))
+    cheese = int(input("Quantity of cheese: "))
+    lettuce = int(input("Quantity of lettuce: "))
+    tomatoes = int(input("Quantity of tomatoes: "))
+    capsicum = int(input("Quantity of capsicum: "))
+    total_cost = ham*top_cost[0] + cheese*top_cost[1] + lettuce*top_cost[2] + tomatoes*top_cost[3] + capsicum*top_cost[4]
+    total_cost = round(total_cost, 2)
+    if total_cost < 5:
+        print("Total cost should be above $5 current cost is: $", total_cost)
+    elif total_cost > 8:
+        print("Total cost is above $8 so You are entitled to a free drink.")
+        break
+    else:
+        print("Total cost: $", total_cost)
+        break

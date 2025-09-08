@@ -1,0 +1,22 @@
+
+import random # changed import math to random
+while True: # changed lowercase t to uppercase
+    dice_list = []
+    for i in range(2):
+        input("Player {}, press enter to roll the three dice".format(i+1))
+        dice = {i} #removed *3 and changed o i
+        for j in range(3):
+            dice[j] = random.randint(0,6)
+            dice_list.append(dice) # changed e to a to append dice to dice_list # indented 
+        print("Player {}, dice = {}" .format(i,dice))
+    if max(dice_list[0]) > max(dice_list[1]):
+        print("Player 1 wins!")
+    elif max(dice_list[0]) == max(dice_list[1]): # added one more = to check for equality
+        print("No winners!")
+    else:  # changed elif to else
+        print("Player 2 wins!")
+        
+    play = input("Play again? (Y/N): ").isupper()
+    if play == 'N':
+        print("Thank you for playing, goodbye!")
+        break # removed : from break

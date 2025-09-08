@@ -1,0 +1,29 @@
+# firstname = input("Please enter your first name: ").lower()
+
+# lastname = input("Please enter your last name: ").lower()
+
+# email_id = firstname[:1] + lastname[-3:] + "@example.com"
+
+# print("Your email ID is " + email_id)
+
+
+
+firstname = input("Please enter your first name: ").lower()
+
+lastname = input("Please enter your last name: ").lower()
+
+email_id = firstname[:1] + lastname[-3:] + "@example.com"
+
+while True:
+    print("Your email ID is " + email_id)
+    confirm = input("Please enter the email address generated:")
+    check1 = confirm.find("@")
+    check2 = confirm.find(".")
+    if check1 == -1 and check2 == -1 :
+         print("Your email address must contain a @ and . ")
+
+    if confirm == email_id:
+        print("you have entered the correct email address")
+        break
+    else:
+        print("you have entered the wrong email address")
